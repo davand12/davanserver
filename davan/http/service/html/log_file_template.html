@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Automation server</title>
+</head>
+<body>
+<div id="header">
+<h1><a href="#">Davan Automation Server</a></h1>
+</div>
+
+<form name="change">
+<SELECT NAME="options" ONCHANGE="document.getElementById('youriframe').src = this.options[this.selectedIndex].value">
+<option>Logfiles</option>
+<OPTIONS_LOGFILES>
+</SELECT>
+<br>
+<div style="font-size: small; background-color:#F8F8FF">
+<iframe name="iframe" id="youriframe" src="select_logfile.html" style="height: 100vh;width: 100vw;" onload="this.style.height=this.contentDocument.body.scrollHeight +'px';"></iframe>
+</div>
+</body>
+</html
+

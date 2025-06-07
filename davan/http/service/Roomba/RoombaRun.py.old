@@ -1,0 +1,41 @@
+import asyncio
+import json
+import logging
+import os
+import asyncio
+
+global logger 
+logger = logging.getLogger(os.path.basename(__file__))
+
+def fetchData(host, user, pwd, data ):
+    logger.info("FETCH DATA")
+
+    import roomba.roomba980.roomba.roomba as roomba
+    myroomba = roomba.Roomba(host, user, pwd)
+    logger.info("FETCH DATA")
+
+    async def test():
+        logger.info("FETCH DATA")
+        myroomba.connect()
+
+        import json, time
+        for i in range(10):
+            if len(myroomba.master_state) > 0 :
+                data = myroomba.master_state
+                logger.info(json.dumps(data['state']['reported']['lastCommand']))
+                break        
+            else:
+                logger.info("No data received")
+            await asyncio.sleep(1)
+
+        myroomba.disconnect()
+    try:
+        loop = asyncio.get_event_loop()
+
+    except RuntimeError as ex:
+        logger.info("Caught exception " + str(ex))
+        if "There is no current event loop in thread" in str(ex):
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+    
+    loop.run_until_complete(test())

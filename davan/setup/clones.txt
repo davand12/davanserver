@@ -1,0 +1,15 @@
+cd .. 
+git clone https://github.com/balloob/pychromecast.git
+cd pychromecast/
+sudo apt-get install python-dev
+sudo pip3 install -r requirements.txt
+python -m compileall .
+
+
+sudo apt-get install opus-tools libopus-dev
+sudo apt-get install alsa-utils
+sudo apt-get install mpg321
+sudo apt-get install lame
+
+sudo apt-get -y install apcupsd
+

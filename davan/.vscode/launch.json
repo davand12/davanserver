@@ -1,0 +1,61 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+   
+            "name": "Roomba",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/service/roomba/RoombaService.py",
+            "console": "integratedTerminal"
+        },
+        {
+   
+            "name": "Tradfri",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/service/tradfri/TradfriService.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "DavanServer",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/applicationserver.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Robomow",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/service/lawn/RobomowService.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Volumio",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/service/speaker/VolumioService.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Speedtest",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/service/speedtest/SpeedtestService.py",
+            "console": "integratedTerminal"
+        }
+        {
+            "name": "ImouCamera",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/pi/davanserver/davan/http/service/picture/ImouCameraService.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

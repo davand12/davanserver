@@ -1,0 +1,6 @@
+from selenium import webdriver
+
+#browser = webdriver.Firefox()
+browser = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
+
+browser.get("http://selenium.dev/")
